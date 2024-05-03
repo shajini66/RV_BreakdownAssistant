@@ -11,14 +11,15 @@ class _mechanic_changepassState extends State<mechanic_changedpass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text(
-        " password  Changed? ",
-        style: TextStyle(color: Colors.brown),
-      ),
-      Text("You are successfully changed password"),
-      TextField(
-        decoration:
-            InputDecoration(border: OutlineInputBorder(), labelText: "Login"),
+      body: Container(
+        alignment: Alignment.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("You are successfully changed password"),
+            TextButton(onPressed: () {}, child: Text('Login'))
+          ],
+        ),
       ),
     );
   }

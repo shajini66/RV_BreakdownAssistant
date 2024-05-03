@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Adminlogin extends StatefulWidget {
   const Adminlogin({super.key});
@@ -20,12 +21,12 @@ class _AdminloginState extends State<Adminlogin> {
           backgroundColor: Colors.green,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: const Column(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
             children: [
               TextField(
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Name"),
+                    border: OutlineInputBorder(), labelText: "Email"),
               ),
               SizedBox(
                 height: 10,
@@ -38,16 +39,16 @@ class _AdminloginState extends State<Adminlogin> {
                 height: 10,
               ),
               TextField(
+                obscureText: true,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Phone"),
+                    border: OutlineInputBorder(), labelText: "password"),
               ),
               SizedBox(
                 height: 10,
               ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Password"),
+              TextButton(
+                onPressed: () {},
+                child: Text('Sign up'),
               ),
             ],
           ),

@@ -12,7 +12,7 @@ class _user_selectState extends State<user_select> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(20.0),
       child: const Column(
         children: [
           TextField(
@@ -20,17 +20,23 @@ class _user_selectState extends State<user_select> {
                 border: OutlineInputBorder(), labelText: "USER"),
           ),
           SizedBox(
-            height: 10,
+            height: 40,
           ),
           TextField(
             obscureText: true,
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "MECHANIC"),
           ),
+          SizedBox(
+            height: 40,
+          ),
           TextField(
             obscureText: true,
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "ADMIN"),
+          ),
+          SizedBox(
+            height: 40,
           ),
         ],
       ),

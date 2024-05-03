@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyWidget extends StatefulWidget {
-  const MyWidget({super.key});
+class user_about extends StatefulWidget {
+  const user_about({super.key});
 
   @override
-  State<MyWidget> createState() => _MyWidgetState();
+  State<user_about> createState() => _user_aboutState();
 }
 
-class _MyWidgetState extends State<MyWidget> {
+class _user_aboutState extends State<user_about> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +19,23 @@ class _MyWidgetState extends State<MyWidget> {
         ),
         backgroundColor: Colors.white,
       ),
-      body: Text(
-        " ",
-        style: TextStyle(color: Colors.white),
+      body: Container(
+        padding: EdgeInsets.all(60),
+        child: Center(
+          child: Column(
+            children: [
+              Text(
+                " Remote vehicle breakdown assistance services provide help to drivers who experience vehicle trouble on the road, especially in remote areas. These services can be particularly useful when you're stranded and unsure of how to get help. They typically offer a variety of services.",
+                style: TextStyle(color: Colors.black),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Text("Everywhere Anytime"),
+              Text("Assistance for your  Vehicle"),
+            ],
+          ),
+        ),
       ),
     );
   }

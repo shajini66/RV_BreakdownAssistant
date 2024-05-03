@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:rvba/screens/user_book.dart';
 import 'package:rvba/screens/user_calling.dart';
@@ -16,7 +17,12 @@ import 'package:rvba/user/user_logo.dart';
 import 'package:rvba/user/user_logot.dart';
 import 'package:rvba/user/user_picdiscri.dart';
 
-void main() {
+import 'admin/admin login.dart';
+import 'firebase_options.dart';
+
+Future<void> main() async {await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(const MyApp());
 }
 
@@ -33,7 +39,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: user_pic(),
+      home: Adminlogin(),
     );
   }
 }

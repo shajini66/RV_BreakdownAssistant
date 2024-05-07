@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_reve.dart';
 
 class user_pay extends StatefulWidget {
   const user_pay({super.key});
@@ -17,25 +18,28 @@ class _user_payState extends State<user_pay> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 30,
+            ),
             TextFormField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30)),
+                      borderRadius: BorderRadius.circular(10)),
                   labelText: 'G pay'),
             ),
             SizedBox(
-              height: 40,
+              height: 50,
             ),
             TextFormField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30)),
+                      borderRadius: BorderRadius.circular(10)),
                   labelText: 'Cash on hand'),
             ),
             SizedBox(
-              height: 80,
+              height: 30,
             ),
-            ElevatedButton(onPressed: () {}, child: Text('Next')),
+            ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>user_review(),));}, child: Text('Next')),
           ],
         ),
       ),

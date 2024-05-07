@@ -16,7 +16,7 @@ class _Mechanic_loginState extends State<Mechanic_login> {
       appBar: AppBar(
         title: const Text(
           "Login",
-          style: TextStyle(color: Colors.amber),
+          style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.green,
       ),

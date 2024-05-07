@@ -18,12 +18,7 @@ class _user_cpassState extends State<user_cpass> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              'assets/images/Rectangle 6.png',
-            ),
-          ),
+          color:  Color(0xffD9D9D9),
         ),
         child: Column(
           children: [
@@ -47,7 +42,7 @@ class _user_cpassState extends State<user_cpass> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: "Current Password",
-                      labelStyle: TextStyle(color: Colors.white))),
+                      labelStyle: TextStyle(color: Colors.black))),
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -56,7 +51,7 @@ class _user_cpassState extends State<user_cpass> {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: " New Password",
-                  labelStyle: TextStyle(color: Colors.white),
+                  labelStyle: TextStyle(color: Colors.black),
                 ),
               ),
             ),
@@ -67,9 +62,9 @@ class _user_cpassState extends State<user_cpass> {
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: " Confirm Password",
-                        labelStyle: TextStyle(color: Colors.white)))),
+                        labelStyle: TextStyle(color: Colors.black)))),
             SizedBox(
-              height: 40,
+              height: 80,
             ),
             ElevatedButton(onPressed: () {}, child: Text('Reset')),
           ],

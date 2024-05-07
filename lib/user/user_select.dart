@@ -15,12 +15,15 @@ class _user_selectState extends State<user_select> {
       padding: const EdgeInsets.all(20.0),
       child: const Column(
         children: [
+          SizedBox(
+            height: 40,
+          ),
           TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "USER"),
           ),
           SizedBox(
-            height: 40,
+            height: 80,
           ),
           TextField(
             obscureText: true,
@@ -28,7 +31,7 @@ class _user_selectState extends State<user_select> {
                 border: OutlineInputBorder(), labelText: "MECHANIC"),
           ),
           SizedBox(
-            height: 40,
+            height: 80,
           ),
           TextField(
             obscureText: true,
@@ -36,7 +39,7 @@ class _user_selectState extends State<user_select> {
                 border: OutlineInputBorder(), labelText: "ADMIN"),
           ),
           SizedBox(
-            height: 40,
+            height: 80,
           ),
         ],
       ),

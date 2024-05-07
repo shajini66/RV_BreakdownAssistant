@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_manufa.dart';
+import 'package:rvba/screens/user_problem.dart';
 
 class user_pfle extends StatefulWidget {
   const user_pfle({super.key});
@@ -15,21 +17,16 @@ class _user_pfleState extends State<user_pfle> {
       appBar: AppBar(
         title: const Text(
           "profile",
-          style: TextStyle(color: Colors.amber),
+          style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.grey,
       ),
-      body: Container(
-        width: double.infinity,
-        height: double.infinity,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              'assets/images/Rectangle 6.png',
-            ),
-          ),
-        ),
+      body:  Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color:  Color(0xffD9D9D9),
+      ),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
           child: SingleChildScrollView(
@@ -42,36 +39,40 @@ class _user_pfleState extends State<user_pfle> {
                 style: TextStyle(fontSize: 30),
               ),
               SizedBox(height: 25),
-              Container(
-                decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.50),
-                    borderRadius: BorderRadius.circular(10)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Container(
-                        child: Image.asset('assets/images/Ellipse 21.png'),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>user_manufa(),));},
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.white.withOpacity(0.50),
+                      borderRadius: BorderRadius.circular(10)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Container(
+                          child: Image.asset('assets/images/Ellipse 21.png'),
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Arjun,'),
-                          Text('user_pfle'),
-                          Text(' 8223561220'),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Arjun,'),
+                            Text('user_pfle'),
+                            Text(' 8223561220'),
+                          ],
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.call),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Icon(Icons.call),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(

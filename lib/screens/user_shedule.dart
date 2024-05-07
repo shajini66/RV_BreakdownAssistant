@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_pay.dart';
 
 class user_shedule extends StatefulWidget {
   const user_shedule({super.key});
@@ -15,12 +16,7 @@ class _user_sheduleState extends State<user_shedule> {
             width: double.infinity,
             height: double.infinity,
             decoration: BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage(
-                  'assets/images/Rectangle 6.png',
-                ),
-              ),
+              color:  Color(0xffD9D9D9),
             ),
             child: SingleChildScrollView(
               child: Column(
@@ -51,8 +47,8 @@ class _user_sheduleState extends State<user_shedule> {
                   SizedBox(height: 40),
                   Text('Choose your slot',
                       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
+                          color: Colors.black,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold)),
                   SizedBox(height: 40),
                   Row(
@@ -94,7 +90,9 @@ class _user_sheduleState extends State<user_shedule> {
                   SizedBox(
                     height: 40,
                   ),
-                  ElevatedButton(onPressed: () {}, child: Text('Continue'))
+                  ElevatedButton(onPressed: () {
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_pay(),));},
+                   child: Text('Continue'))
                 ],
               ),
             )));

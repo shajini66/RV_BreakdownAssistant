@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_cpassword.dart';
+import 'package:rvba/screens/user_help.dart';
+import 'package:rvba/screens/user_home.dart';
+import 'package:rvba/screens/user_pfle.dart';
+import 'package:rvba/user/user_about.dart';
+import 'package:rvba/user/user_logot.dart';
 
 class user_setting extends StatefulWidget {
   const user_setting({super.key});
@@ -18,12 +24,7 @@ class _user_settingState extends State<user_setting> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              'assets/images/Rectangle 6.png',
-            ),
-          ),
+          color:  Color(0xffD9D9D9),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -69,6 +70,9 @@ class _user_settingState extends State<user_setting> {
                         thickness: 1,
                       ),
                       ListTile(
+                        onTap: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_cpass(),));},
+
                         leading: Image.asset(
                           'assets/images/Frame (8).png',
                           width: 20,
@@ -80,6 +84,9 @@ class _user_settingState extends State<user_setting> {
                         thickness: 1,
                       ),
                       ListTile(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>user_help(),));},
+
                         leading: Image.asset(
                           'assets/images/Frame (9).png',
                           width: 20,
@@ -91,6 +98,9 @@ class _user_settingState extends State<user_setting> {
                         thickness: 1,
                       ),
                       ListTile(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>user_about(),));},
+
                         leading: Image.asset(
                           'assets/images/Frame (10).png',
                           width: 20,
@@ -102,6 +112,9 @@ class _user_settingState extends State<user_setting> {
                         thickness: 1,
                       ),
                       ListTile(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>user_pfle(),));},
+
                         leading: Image.asset(
                           'assets/images/Frame (11).png',
                           width: 20,
@@ -113,6 +126,9 @@ class _user_settingState extends State<user_setting> {
                         thickness: 1,
                       ),
                       ListTile(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>user_logot(),));},
+
                         leading: Image.asset(
                           'assets/images/Frame (13).png',
                           width: 20,
@@ -122,9 +138,9 @@ class _user_settingState extends State<user_setting> {
                     ],
                   )),
               SizedBox(
-                height: 10,
+                height: 50,
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Book')),
+              ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>user_cpass(),));}, child: Text('Book')),
             ],
           ),
         ),

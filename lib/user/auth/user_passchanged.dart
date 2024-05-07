@@ -26,25 +26,43 @@ class _user_passchangedState extends State<user_passchanged>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+
+      body:Container(
+        padding: EdgeInsets.all(16.0),
+        child:
+        Column(
         children: [
+
           Text(
             'password  Changed? ',
-            style: TextStyle(color: Colors.brown, fontSize: 20),
+            style: TextStyle(color: Colors.brown, fontSize: 24),
           ),
+
+          SizedBox(
+            height: 100,
+          ),
+
           Text(
-            "You are successfully changed password",
+            "You are successfully changed  password",
+
             style: TextStyle(color: Colors.black, fontSize: 20),
           ),
+SizedBox(
+  height:40 ,
+),
+          Image.asset('assets/images/Approval.png'),
           SizedBox(
-            height: 40,
+            height: 100,
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Sign up'),
+            style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+            child: Text('Login'),
           ),
         ],
       ),
+    ),
     );
+
   }
 }

@@ -16,16 +16,19 @@ class _user_resetState extends State<user_reset> {
         child: Column(children: [
           Row(
             children: [
+              SizedBox(
+                height: 200,
+              ),
               Text(
                 "Reset your password ?",
-                style: TextStyle(color: Colors.brown, fontSize: 24),
+                style: TextStyle(color: Colors.brown, fontSize: 20),
               ),
               SizedBox(
                 height: 60,
               ),
             ],
           ),
-          TextField(
+          TextFormField(
             obscureText: true,
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "New password"),
@@ -33,15 +36,21 @@ class _user_resetState extends State<user_reset> {
           SizedBox(
             height: 60,
           ),
-          TextField(
+          TextFormField(
             obscureText: true,
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: " Confirm Password"),
           ),
+          SizedBox(
+            height: 100,
+          ),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Update'),
-          ),
+            style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+            child: Text('Update',style: TextStyle(color: Colors.white, fontSize: 24)),
+
+            ),
+
         ]),
       ),
     );

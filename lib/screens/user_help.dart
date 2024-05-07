@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_shedule.dart';
 
 class user_help extends StatefulWidget {
   const user_help({super.key});
@@ -12,14 +13,13 @@ class _user_helpState extends State<user_help> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+
         title: Text('Help Center'),
       ),
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/Rectangle 6.png'),
-                  fit: BoxFit.fill)),
+            color:  Color(0xffD9D9D9),),
           padding: EdgeInsets.all(50),
           child: Container(
             padding: EdgeInsets.all(60),
@@ -28,7 +28,7 @@ class _user_helpState extends State<user_help> {
               children: [
                 Text(
                   'How can help you',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(
                   height: 40,
@@ -60,6 +60,8 @@ class _user_helpState extends State<user_help> {
                   thickness: 1,
                 ),
                 ListTile(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_shedule(),));},
                   leading: Icon(Icons.book_online),
                   title: Text('Booking'),
                 ),

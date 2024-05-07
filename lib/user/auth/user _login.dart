@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../screens/user_signup.dart';
+
 class user_login extends StatefulWidget {
   const user_login({super.key});
 
@@ -12,6 +14,19 @@ class _user_loginState extends State<user_login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Login",
+              ),
+            ],
+          ),
+        ),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -50,11 +65,13 @@ class _user_loginState extends State<user_login> {
               height: 40,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return UserSignup();
+              },));},
               child: Text('Sign up'),
             ),
             SizedBox(
-              height: 40,
+              height: 50,
             ),
           ],
         ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_book%20copy.dart';
+import 'package:rvba/screens/user_shedule.dart';
 
 class user_manufa extends StatefulWidget {
   const user_manufa({super.key});
@@ -15,12 +17,7 @@ class _user_manufaState extends State<user_manufa> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              'assets/images/Rectangle 6.png',
-            ),
-          ),
+          color: Color(0xffD9D9D9),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -99,12 +96,45 @@ class _user_manufaState extends State<user_manufa> {
                         leading: Icon(Icons.control_point),
                         title: Text('Washing'),
                       ),
-                    ],
-                  ))
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => user_book(),
+                                  ));
+                            },
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.black),
+                            child: Text('Quick service'),
+                          ),
+SizedBox(
+  height: 50,
+),
+
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => user_shedule(),
+                              ));
+                        },
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black),
+                        child: Text('Schedule'),
+                      ),
+
+        ]
+
+                  ),
             ],
           ),
         ),
-      ),
-    );
+  ]),
+    )));
   }
 }

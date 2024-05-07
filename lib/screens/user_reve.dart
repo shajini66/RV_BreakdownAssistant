@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_setting.dart';
 
 class user_review extends StatefulWidget {
   const user_review({super.key});
@@ -18,9 +19,7 @@ class _user_reviewState extends State<user_review> {
       body: SingleChildScrollView(
         child: Container(
           decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage('assets/images/Rectangle 6.png'),
-                  fit: BoxFit.fill)),
+            color:  Color(0xffD9D9D9),),
           padding: EdgeInsets.all(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -52,7 +51,7 @@ class _user_reviewState extends State<user_review> {
               SizedBox(
                 height: 80,
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Submit')),
+              ElevatedButton(onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>user_setting(),));}, child: Text('Submit')),
             ],
           ),
         ),

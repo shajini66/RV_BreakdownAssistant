@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_shedule.dart';
 
 class user_book extends StatefulWidget {
   const user_book({super.key});
@@ -16,12 +17,7 @@ class _user_bookState extends State<user_book> {
         width: double.infinity,
         height: double.infinity,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            fit: BoxFit.fill,
-            image: AssetImage(
-              'assets/images/Rectangle 6.png',
-            ),
-          ),
+          color:  Color(0xffD9D9D9),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -117,7 +113,9 @@ class _user_bookState extends State<user_book> {
               SizedBox(
                 height: 10,
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Book'))
+              ElevatedButton(onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>user_shedule()));
+              }, child: Text('Book'))
             ],
           ),
         ),

@@ -13,21 +13,21 @@ class _admin_signupState extends State<admin_signup> {
     return Scaffold(
         body: Padding(
       padding: const EdgeInsets.all(8.0),
-      child: const Column(
+      child:  Column(
         children: [
           TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "User name"),
           ),
           SizedBox(
-            height: 10,
+            height: 50,
           ),
           TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "Email"),
           ),
           SizedBox(
-            height: 10,
+            height: 50,
           ),
           TextField(
             obscureText: true,
@@ -35,18 +35,20 @@ class _admin_signupState extends State<admin_signup> {
                 border: OutlineInputBorder(), labelText: "password"),
           ),
           SizedBox(
-            height: 10,
+            height: 50,
           ),
           TextField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "Confirm password"),
           ),
-          TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "Sign Up"),
+          ElevatedButton(
+            onPressed: () {},
+            style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+            child: Text('Sign up'),
           ),
         ],
       ),
-    ));
+    ),
+    );
   }
 }

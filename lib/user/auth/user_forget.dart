@@ -12,24 +12,45 @@ class _user_forgetState extends State<user_forget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 50,
+          ),
           Text(
             "forget password ?",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.black,fontSize: 24),
+          ),
+          SizedBox(
+            height: 40,
           ),
           Text(
             "We will send a verification code to this email ",
+            style: TextStyle(color: Colors.black,fontSize: 16),
           ),
-          TextField(
+          SizedBox(
+            height: 100,
+          ),
+          TextFormField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "email"),
           ),
+          SizedBox(
+            width: 40,
+            height: 100,
+          ),
           ElevatedButton(
             onPressed: () {},
+            style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+
             child: Text('Send'),
+
+          ),
+          SizedBox(
+            height: 250,
           ),
         ],
+
       ),
     );
   }

@@ -9,7 +9,7 @@ class Adminlogin extends StatefulWidget {
 }
 
 class _AdminloginState extends State<Adminlogin> {
-  Firebase
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,42 +17,61 @@ class _AdminloginState extends State<Adminlogin> {
         appBar: AppBar(
           title: const Text(
             "Login",
-            style: TextStyle(color: Colors.amber),
+
+            style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.green,
+
+          backgroundColor: Colors.grey,
         ),
-        body: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Email"),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "Email"),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), labelText: "password"),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text('Sign up'),
-              ),
-            ],
-          ),
-        ));
+      body: Container(
+      width: double.infinity,
+      height: double.infinity,
+      decoration: BoxDecoration(
+        color:  Color(0xffD9D9D9),
+      ),
+     child:  Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 60,
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(), labelText: "Email"),
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(), labelText: "Password"),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'forget password',
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 60,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Login'),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+
+          ],
+        ),
+      ),
+
+        ),
+    );
   }
 }

@@ -16,12 +16,16 @@ class _user_picState extends State<user_pic> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              Container(height: 100,width: 200,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage('assets/images/image1.png'),
                         fit: BoxFit.fill),
                     shape: BoxShape.rectangle),
+
+              ),
+              SizedBox(
+                height: 50,
               ),
               ElevatedButton(
                   onPressed: () {},
@@ -35,6 +39,9 @@ class _user_picState extends State<user_pic> {
                       Icon(Icons.arrow_forward_ios)
                     ],
                   )),
+              SizedBox(
+                width: 10,
+              ),
             ],
           )),
     );

@@ -11,29 +11,48 @@ class _mechanic_forgetState extends State<mechanic_forget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            "forget password ?",
-            style: TextStyle(color: Colors.white),
+        body:SingleChildScrollView(
+          child:    Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                "forget password ?",
+                style: TextStyle(color: Colors.black,fontSize: 20),
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              Text(
+                "We will send a verification code to this email ",
+                style: TextStyle(color: Colors.black,fontSize: 16),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              TextFormField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(), labelText: "email"),
+              ),
+              SizedBox(
+                width: 100,
+                height: 50,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+
+                child: Text('Send'),
+
+              ),
+              SizedBox(
+                height: 250,
+              ),
+            ],
+
           ),
-          Text(
-            "We will send averification code to this email ",
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          TextFormField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "email"),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          ElevatedButton(onPressed: () {}, child: Text('Send'))
-        ],
-      ),
-    );
+        ));
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:rvba/admin/admin_Uprofile.dart';
 
 class Adminlogin extends StatefulWidget {
   const Adminlogin({super.key});
@@ -10,9 +11,26 @@ class Adminlogin extends StatefulWidget {
 
 class _AdminloginState extends State<Adminlogin> {
 
+
+  Adlogin() {
+    if (Email.text == 'admin@gmail.com' && Password.text == '1234') {
+      Navigator.push(context, MaterialPageRoute(
+        builder: (context) {
+          return admin_upfl();
+        },
+      ));
+    }
+  }
+  final formkey=GlobalKey<FormState>();
+  var Email=TextEditingController();
+  var Password=TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Form(
+        key: formkey,
+    child:  Scaffold(
         //app bar
         appBar: AppBar(
           title: const Text(
@@ -36,31 +54,36 @@ class _AdminloginState extends State<Adminlogin> {
             SizedBox(
               height: 60,
             ),
-            TextField(
+
+              TextFormField(
+                controller: Email,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Empty";
+                  }
+                },
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: "Email"),
             ),
             SizedBox(
               height: 60,
             ),
-            TextField(
+            TextFormField(
+              controller: Password,
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return "Empty";
+                }
+              },
               obscureText: true,
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: "Password"),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  'forget password',
-                ),
-              ],
-            ),
             SizedBox(
-              height: 60,
+              height: 50,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {Adlogin();},
               child: Text('Login'),
             ),
             SizedBox(
@@ -72,6 +95,6 @@ class _AdminloginState extends State<Adminlogin> {
       ),
 
         ),
-    );
+    ));
   }
 }

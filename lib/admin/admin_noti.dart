@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rvba/screens/user_shedule.dart';
+import 'package:rvba/admin/admin_logout.dart';
 
-class user_book extends StatefulWidget {
-  const user_book({super.key});
+class admin_not extends StatefulWidget {
+  const admin_not({super.key});
 
   @override
-  State<user_book> createState() => _user_bookState();
+  State<admin_not> createState() => _admin_notState();
 }
 
-class _user_bookState extends State<user_book> {
+class _admin_notState extends State<admin_not> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(top: 20),
@@ -20,7 +20,7 @@ class _user_bookState extends State<user_book> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text(
-                "Booking",
+                "Notification",
               ),
             ],
           ),
@@ -121,15 +121,19 @@ class _user_bookState extends State<user_book> {
                           decoration: InputDecoration(
                               labelText: 'Describe your complaint'),
                         ),
+
+
                       ),
+
+
                     ],
                   )),
               SizedBox(
                 height: 10,
               ),
               ElevatedButton(onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context)=>user_shedule()));
-              }, child: Text('Book'))
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>admin_logout()));
+              }, child: Text('Send'))
             ],
           ),
         ),
@@ -137,3 +141,8 @@ class _user_bookState extends State<user_book> {
     );
   }
 }
+
+
+
+
+

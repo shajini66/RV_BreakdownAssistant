@@ -26,14 +26,22 @@ class _mechanic_resetState extends State<mechanic_reset>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text(
-            "Reset your password ?",
-            style: TextStyle(color: Colors.brown),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(children: [
+          Row(
+            children: [
+              SizedBox(
+                height: 200,
+              ),
+              Text(
+                "Reset your password ?",
+                style: TextStyle(color: Colors.brown, fontSize: 20),
+              ),
+              SizedBox(
+                height: 60,
+              ),
+            ],
           ),
           TextFormField(
             obscureText: true,
@@ -41,18 +49,24 @@ class _mechanic_resetState extends State<mechanic_reset>
                 border: OutlineInputBorder(), labelText: "New password"),
           ),
           SizedBox(
-            height: 10,
+            height: 60,
           ),
-          TextField(
+          TextFormField(
             obscureText: true,
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: " Confirm Password"),
           ),
-          TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "Update"),
+          SizedBox(
+            height: 100,
           ),
-        ],
+          ElevatedButton(
+            onPressed: () {},
+            style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+            child: Text('Update',style: TextStyle(color: Colors.white, fontSize: 24)),
+
+          ),
+
+        ]),
       ),
     );
   }

@@ -1,25 +1,24 @@
-import 'dart:async';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rvba/screens/user_home.dart';
+import 'package:rvba/mechanic/mech_home.dart';
 
-class UserSignup extends StatefulWidget {
-  const UserSignup({super.key});
+class mech_signup extends StatefulWidget {
+  const mech_signup({super.key});
 
   @override
-  State<UserSignup> createState() => _UserSignupState();
+  State<mech_signup> createState() => _mech_signupState();
 }
 
-class _UserSignupState extends State<UserSignup> {
+class _mech_signupState extends State<mech_signup> {
   final formKey = GlobalKey<FormState>();
   var name = TextEditingController();
   var email = TextEditingController();
   var password = TextEditingController();
   var confirmpassword = TextEditingController();
 
-  Future<dynamic> Reg() async {
-    await FirebaseFirestore.instance.collection("User Register").add({
+  Future<dynamic> Register() async {
+    await FirebaseFirestore.instance.collection("mech Register").add({
       "UserName": name.text,
       "Email": email.text,
       "Password": password.text
@@ -28,13 +27,13 @@ class _UserSignupState extends State<UserSignup> {
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => user_home(),
+          builder: (context) => mech_home(),
         ));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Form(
+    return  Form(
       key: formKey,
       child: Scaffold(
         backgroundColor: Colors.grey.shade100,
@@ -112,7 +111,7 @@ class _UserSignupState extends State<UserSignup> {
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
                     if (password == confirmpassword) {
-                      Reg();
+                      Register();
                     }
                     else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
@@ -133,3 +132,6 @@ class _UserSignupState extends State<UserSignup> {
     );
   }
 }
+
+
+

@@ -11,16 +11,42 @@ class _mechanic_changepassState extends State<mechanic_changedpass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body:Container(
+        padding: EdgeInsets.all(16.0),
+        child:
+        Column(
           children: [
-            Text("You are successfully changed password"),
-            TextButton(onPressed: () {}, child: Text('Login'))
+
+            Text(
+              'password  Changed? ',
+              style: TextStyle(color: Colors.brown, fontSize: 24),
+            ),
+
+            SizedBox(
+              height: 100,
+            ),
+
+            Text(
+              "You are successfully changed  password",
+
+              style: TextStyle(color: Colors.black, fontSize: 20),
+            ),
+            SizedBox(
+              height:40 ,
+            ),
+            Image.asset('assets/images/Approval.png'),
+            SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              style:ElevatedButton.styleFrom( backgroundColor: Colors.black),
+              child: Text('Login'),
+            ),
           ],
         ),
       ),
     );
+
   }
 }

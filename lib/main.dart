@@ -1,7 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:rvba/admin/admin_Mprofile.dart';
+import 'package:rvba/admin/admin_Uprofile.dart';
 import 'package:rvba/admin/admin_forget.dart';
 import 'package:rvba/admin/admin_signup.dart';
+import 'package:rvba/mechanic/mech_home.dart';
+import 'package:rvba/mechanic/mech_manufac.dart';
+import 'package:rvba/mechanic/mech_pay.dart';
+import 'package:rvba/mechanic/mech_service.dart';
+import 'package:rvba/mechanic/mechanic_forget.dart';
+import 'package:rvba/mechanic/mechanic_login.dart';
 import 'package:rvba/screens/user_book.dart';
 import 'package:rvba/screens/user_calling.dart';
 import 'package:rvba/screens/user_cpassword.dart';
@@ -30,6 +38,7 @@ import 'package:rvba/user/user_select.dart';
 
 import 'admin/admin login.dart';
 import 'firebase_options.dart';
+import 'mechanic/mechanic_reset.dart';
 
 Future<void> main() async {await Firebase.initializeApp(
   options: DefaultFirebaseOptions.currentPlatform,
@@ -50,7 +59,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:user_login(),
+      home:Adminlogin(),
     );
   }
 }

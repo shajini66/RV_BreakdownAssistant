@@ -11,7 +11,8 @@ class _user_forgetState extends State<user_forget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body:SingleChildScrollView(
+   child:    Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           SizedBox(
@@ -19,7 +20,7 @@ class _user_forgetState extends State<user_forget> {
           ),
           Text(
             "forget password ?",
-            style: TextStyle(color: Colors.black,fontSize: 24),
+            style: TextStyle(color: Colors.black,fontSize: 20),
           ),
           SizedBox(
             height: 40,
@@ -29,15 +30,15 @@ class _user_forgetState extends State<user_forget> {
             style: TextStyle(color: Colors.black,fontSize: 16),
           ),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
           TextFormField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(), labelText: "email"),
           ),
           SizedBox(
-            width: 40,
-            height: 100,
+            width: 100,
+            height: 50,
           ),
           ElevatedButton(
             onPressed: () {},
@@ -52,6 +53,6 @@ class _user_forgetState extends State<user_forget> {
         ],
 
       ),
-    );
+    ));
   }
 }

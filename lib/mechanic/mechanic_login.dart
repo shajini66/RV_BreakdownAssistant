@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:rvba/mechanic/mech_home.dart';
 
 class Mechanic_login extends StatefulWidget {
   const Mechanic_login({super.key});
@@ -14,39 +15,55 @@ class _Mechanic_loginState extends State<Mechanic_login> {
     return Scaffold(
       //app bar
       appBar: AppBar(
-        title: const Text(
-          "Login",
-          style: TextStyle(color: Colors.black),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                "Login",
+              ),
+            ],
+          ),
         ),
-        backgroundColor: Colors.green,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: const Column(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
           children: [
+            SizedBox(
+              height: 60,
+            ),
             TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: "Email"),
             ),
             SizedBox(
-              height: 10,
+              height: 60,
             ),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: "Password"),
             ),
-            Text(
-              "forget password ?",
-              style: TextStyle(color: Colors.white),
-            ),
-            TextField(
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(), labelText: "Login"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  'forget password',
+                ),
+              ],
             ),
             SizedBox(
-              height: 10,
+              height: 60,
             ),
+            ElevatedButton(
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>mech_home(),));},
+    child: Text('Login'))
+
+
+
+
           ],
         ),
       ),

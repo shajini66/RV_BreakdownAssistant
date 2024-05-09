@@ -36,13 +36,13 @@ class _user_manufaState extends State<user_manufa> {
                 child: Image.asset("assets/images/Ellipse 21.png"),
               ),
               SizedBox(
-                height: 40,
+                height: 30,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40, vertical: 0),
                 child: Container(
                   width: 300,
-                  height: 100,
+                  height: 30,
                   color: Colors.white,
                   child: Column(
                     children: [

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/screens/user_book%20copy.dart';
+import 'package:rvba/screens/user_pay.dart';
 import 'package:rvba/screens/user_shedule.dart';
 
 class user_help extends StatefulWidget {
@@ -44,6 +46,8 @@ class _user_helpState extends State<user_help> {
                   height: 40,
                 ),
                 ListTile(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_pay(),));},
                   leading: Icon(Icons.payment),
                   title: Text('Payment'),
                 ),
@@ -52,6 +56,8 @@ class _user_helpState extends State<user_help> {
                   thickness: 1,
                 ),
                 ListTile(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_shedule(),));},
                   leading: Icon(Icons.schedule),
                   title: Text('schedule'),
                 ),
@@ -61,7 +67,7 @@ class _user_helpState extends State<user_help> {
                 ),
                 ListTile(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_shedule(),));},
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>user_book(),));},
                   leading: Icon(Icons.book_online),
                   title: Text('Booking'),
                 ),

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:rvba/screens/user_home.dart';
+import 'package:rvba/user/auth/user%20_login.dart';
+import 'package:rvba/user/user_bottom.dart';
 
 class UserSignup extends StatefulWidget {
   const UserSignup({super.key});
@@ -17,18 +19,20 @@ class _UserSignupState extends State<UserSignup> {
   var email = TextEditingController();
   var password = TextEditingController();
   var confirmpassword = TextEditingController();
+  var phonenumber=TextEditingController();
 
   Future<dynamic> Reg() async {
     await FirebaseFirestore.instance.collection("User Register").add({
       "UserName": name.text,
       "Email": email.text,
-      "Password": password.text
+      "Password": password.text,
+      "phone number":phonenumber.text,
     });
     print("done");
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => user_home(),
+          builder: (context) => user_login(),
         ));
   }
 
@@ -108,10 +112,21 @@ class _UserSignupState extends State<UserSignup> {
               SizedBox(
                 height: 40,
               ),
+              TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Empty";
+                  }
+                },
+                controller: phonenumber,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: "phone number"),
+              ),
               ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    if (password == confirmpassword) {
+                    if (password.text == confirmpassword.text) {
                       Reg();
                     }
                     else {

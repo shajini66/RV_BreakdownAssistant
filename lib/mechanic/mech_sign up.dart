@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rvba/mechanic/mech_home.dart';
+import 'package:rvba/mechanic/mechanic_login.dart';
 
 class mech_signup extends StatefulWidget {
   const mech_signup({super.key});
@@ -16,18 +17,20 @@ class _mech_signupState extends State<mech_signup> {
   var email = TextEditingController();
   var password = TextEditingController();
   var confirmpassword = TextEditingController();
+  var Phonenumber = TextEditingController();
 
-  Future<dynamic> Register() async {
+  Future<dynamic> MechRegister() async {
     await FirebaseFirestore.instance.collection("mech Register").add({
       "UserName": name.text,
       "Email": email.text,
-      "Password": password.text
+      "Password": password.text,
+      "Phone number":Phonenumber.text,
     });
     print("done");
     Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => mech_home(),
+          builder: (context) => Mechanic_login(),
         ));
   }
 
@@ -107,19 +110,34 @@ class _mech_signupState extends State<mech_signup> {
               SizedBox(
                 height: 40,
               ),
+              TextFormField(
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Empty";
+                  }
+                },
+                controller: Phonenumber,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: "phone number"),
+              ),
+              SizedBox(
+                height: 40,
+              ),
               ElevatedButton(
                 onPressed: () {
                   if (formKey.currentState!.validate()) {
-                    if (password == confirmpassword) {
-                      Register();
+                    if (password.text == confirmpassword.text) {
+                      MechRegister();
                     }
+                  }
                     else {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                           content: Text(
                             "Password do not match",
                             style: TextStyle(color: Colors.red),
                           )));
-                    }
+
                   }
                 },
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.black),

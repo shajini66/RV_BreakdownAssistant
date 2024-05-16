@@ -82,12 +82,12 @@ class _AdminloginState extends State<Adminlogin> {
             SizedBox(
               height: 50,
             ),
-            ElevatedButton(
-              onPressed: () {Adlogin();},
-              child: Text('Login'),
-            ),
+
             SizedBox(
               height: 40,
+            ), ElevatedButton(
+              onPressed: () {Adlogin();},
+              child: Text('Login'),
             ),
 
           ],

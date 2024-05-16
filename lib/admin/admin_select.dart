@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rvba/admin/admin_Mprofile.dart';
+import 'package:rvba/admin/admin_Uprofile.dart';
 
 class admin_select extends StatefulWidget {
   const admin_select({super.key});
@@ -11,21 +13,36 @@ class _admin_selectState extends State<admin_select> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: const Column(
+        body: Container(
+      padding: EdgeInsets.all(30),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "USER"),
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => admin_upfl(),
+                  ));
+            },
+            child: Text('USER MANAGE'),
           ),
           SizedBox(
-            height: 10,
+            height: 100,
           ),
-          TextField(
-            obscureText: true,
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), labelText: "MECHANIC"),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => admin_Mpfle(),
+                  ));
+            },
+            child: Text('MECHANIC MANAGE'),
           ),
         ],
       ),

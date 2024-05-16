@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:rvba/admin/admin_Mprofile.dart';
 import 'package:rvba/admin/admin_Uprofile.dart';
 import 'package:rvba/admin/admin_forget.dart';
-import 'package:rvba/admin/admin_signup.dart';
+import 'package:rvba/mechanic/mech_bottom.dart';
+
 import 'package:rvba/mechanic/mech_home.dart';
 import 'package:rvba/mechanic/mech_manufac.dart';
 import 'package:rvba/mechanic/mech_pay.dart';
@@ -30,13 +31,16 @@ import 'package:rvba/user/auth/user_forget.dart';
 import 'package:rvba/user/auth/user_passchanged.dart';
 import 'package:rvba/user/auth/user_reset.dart';
 import 'package:rvba/user/user_about.dart';
+import 'package:rvba/user/user_bottom.dart';
 import 'package:rvba/user/user_logo.dart';
 import 'package:rvba/user/user_logot.dart';
 import 'package:rvba/user/user_picdiscri.dart';
+import 'package:rvba/user/user_profile.dart';
 
 import 'package:rvba/user/user_select.dart';
 
 import 'admin/admin login.dart';
+import 'admin/admin_select.dart';
 import 'firebase_options.dart';
 import 'mechanic/mechanic_reset.dart';
 
@@ -59,7 +63,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:Adminlogin(),
-    );
+      home:admin_Mpfle(
+    ));
   }
 }

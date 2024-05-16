@@ -116,7 +116,7 @@ class _user_homeState extends State<user_home> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5),
-                      child: Text('For wheeler',
+                      child: Text('Four wheeler',
                         style:TextStyle(fontSize: 20.0)),
                     ),
                   ],
@@ -140,7 +140,7 @@ class _user_homeState extends State<user_home> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(5),
-                      child: Text('Six wheeler',
+                      child: Text('others wheeler',
                         style:TextStyle(fontSize: 20.0)),
                     ),
                   ],
